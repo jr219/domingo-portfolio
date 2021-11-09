@@ -1,5 +1,4 @@
 import React from "react";
-import myImage from "../img/myImage.png";
 
 class About extends React.Component {
   constructor() {
@@ -40,23 +39,29 @@ class About extends React.Component {
           value: "80"
         }
       ],
-      about_me: [
-        {
-          id: "first-p-about",
-          content:
-            "Lorem ipsum pariatur consectetur laboris occaecat nulla aliqua irure ad deserunt duis. Eiusmod nulla cupidatat labore sint sit aute dolore irure nostrud ut incididunt. Anim laborum reprehenderit labore magna ut dolore quis irure. Labore ea duis deserunt ullamco irure fugiat deserunt ut nisi ea minim proident. Nisi consectetur do non magna duis aliqua minim minim veniam. In occaecat minim qui consequat elit mollit consectetur non id tempor. Amet adipisicing occaecat tempor culpa quis est duis."
-        },
-        {
-          id: "second-p-about",
-          content:
-            "Lorem ipsum pariatur consectetur laboris occaecat nulla aliqua irure ad deserunt duis. Eiusmod nulla cupidatat labore sint sit aute dolore irure nostrud ut incididunt. Anim laborum reprehenderit labore magna ut dolore quis irure. Labore ea duis deserunt ullamco irure fugiat deserunt ut nisi ea minim proident. Nisi consectetur do non magna duis aliqua minim minim veniam. In occaecat minim qui consequat elit mollit consectetur non id tempor. Amet adipisicing occaecat tempor culpa quis est duis."
-        },
-        {
-          id: "third-p-about",
-          content:
-            "Lorem ipsum pariatur consectetur laboris occaecat nulla aliqua irure ad deserunt duis. Eiusmod nulla cupidatat labore sint sit aute dolore irure nostrud ut incididunt. Anim laborum reprehenderit labore magna ut dolore quis irure. Labore ea duis deserunt ullamco irure fugiat deserunt ut nisi ea minim proident. Nisi consectetur do non magna duis aliqua minim minim veniam. In occaecat minim qui consequat elit mollit consectetur non id tempor. Amet adipisicing occaecat tempor culpa quis est duis."
-        }
-      ]
+      about_me:
+        `My name is Domingo Estrabela (Jr Estrabela). 
+I am an experienced web developer with 5 years experience and a history of working with AWS services.
+
+I have strong professional skills in
+  - React
+  - Node.js
+  - Typescript
+  - Python
+
+Also have deep knowledge and experience in AWS services
+  - Lambda function
+  - EC2
+  - Elastic Beanstalk
+  - CodePipeline
+  - API Gateway
+  - SQS, SES, SNS
+  - Amplify
+
+I am ready to start work with you.
+
+Thank you
+`
     };
   }
 
@@ -68,6 +73,18 @@ class About extends React.Component {
             <div className="col-sm-12">
               <div className="box-shadow-full">
                 <div className="row">
+                  <div className="col-md-6">
+                    <div className="about-me pt-4 pt-md-0">
+                      <div className="title-box-2">
+                        <h5 className="title-left">About Me</h5>
+                      </div>
+                      {
+                        <p className="lead">
+                          {this.state.about_me}
+                        </p>
+                      }
+                    </div>
+                  </div>
                   <div className="col-md-6">
                     <div className="row">
                       <div
@@ -105,20 +122,6 @@ class About extends React.Component {
                               ></div>
                             </div>
                           </React.Fragment>
-                        );
-                      })}
-                    </div>
-                  </div>
-                  <div className="col-md-6">
-                    <div className="about-me pt-4 pt-md-0">
-                      <div className="title-box-2">
-                        <h5 className="title-left">About Me</h5>
-                      </div>
-                      {this.state.about_me.map(content => {
-                        return (
-                          <p className="lead" key={content.id}>
-                            {content.content}
-                          </p>
                         );
                       })}
                     </div>

@@ -692,6 +692,11 @@ ABOUT
   background-color: #0078ff;
 }
 
+.lead {
+  word-wrap: break-word;
+  white-space: break-spaces;
+}
+
 /*
 PORTFOLIO
 */
